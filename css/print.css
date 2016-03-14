@@ -1,0 +1,27 @@
+
+
+.late {
+text-decoration: underline;
+font-weight: bold;
+}
+
+td {
+color: black;
+}
+
+font {
+color: black;
+}
+
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}   
+a:hover {text-decoration: none;}     
+a:active {text-decoration: none;}
+a{
+color:black;
+}
+
+.no-print {
+display: none;
+}
+
