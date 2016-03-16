@@ -26,6 +26,8 @@ echo "<option value='4'>Cohort 4 - Carpentry</option>";
 echo "<option value='5'>Cohort 5 - Precision Machining</option>";
 echo "<option value='6'>Cohort 6 - Mechatronics</option>";
 echo "<option value='7'>Cohort 7 - Welding</option>";
+echo "<option value='9'>Cohort 9 - Mechatronics</option>";
+echo "<option value='10'>Cohort 10 - Carpentry</option>";
 
 echo "</select>";
 echo "<input type='submit' value='Submit'>";
@@ -47,7 +49,13 @@ if (isset($_REQUEST["cohortNumber"])){
 			break;	
 		case 7:
 			$cohortNumName = "7 - Welding";
-			break;		
+			break;	
+		case 9:
+			$cohortNumName = "9 - Mechatronics";
+			break;	
+		case 10:
+			$cohortNumName = "10 - Carpentry";
+			break;				
 		default:
 			$cohortNumName = $cohortNum;
 	}

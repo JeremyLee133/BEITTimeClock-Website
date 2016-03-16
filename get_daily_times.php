@@ -36,7 +36,13 @@ if (isset($_GET["sID"])){
 			break;	
 		case 7:
 			$cohortNumName = "7 - Welding";
-			break;		
+			break;
+		case 9:
+			$cohortNumName = "9 - Mechatronics";
+			break;
+		case 10:
+			$cohortNumName = "10 - Carpentry";
+			break;					
 		default:
 			$cohortNumName = $fullName['cohortNumber'];
 	}

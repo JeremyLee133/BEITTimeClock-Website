@@ -19,6 +19,12 @@ if($cohortNum == 6){
 if($cohortNum == 7){
 	$clockedOutStudents = mysqli_query($con,"SELECT * FROM cohortcurrent WHERE in_out = 'Out' AND cohortNumber = 7");
 }
+if($cohortNum == 9){
+	$clockedOutStudents = mysqli_query($con,"SELECT * FROM cohortcurrent WHERE in_out = 'Out' AND cohortNumber = 9");
+}
+if($cohortNum == 10){
+	$clockedOutStudents = mysqli_query($con,"SELECT * FROM cohortcurrent WHERE in_out = 'Out' AND cohortNumber = 10");
+}
 
 $clockedOutTimes = array();
 while ($row = mysqli_fetch_array($clockedOutStudents)){
@@ -35,6 +41,10 @@ if (date("m/d/y", max($clockedOutTimes)/1000) != date ("m/d/y")){
 		$newestTime = strtotime("16:30:00") *1000;
 	} elseif ($cohortNum == 7){
 		$newestTime = strtotime("16:30:00") *1000;
+	} elseif ($cohortNum == 9){
+		$newestTime = strtotime("16:30:00") *1000;
+	} elseif ($cohortNum == 10){
+		$newestTime = strtotime("22:30:00") *1000;
 	}
 } else {
 	$newestTime = max($clockedOutTimes);
@@ -52,6 +62,12 @@ if($cohortNum == 6){
 }
 if($cohortNum == 7){
 	$clockedInStudents = mysqli_query($con,"SELECT * FROM cohortcurrent WHERE in_out = 'In' AND cohortNumber = 7");
+}
+if($cohortNum == 9){
+	$clockedInStudents = mysqli_query($con,"SELECT * FROM cohortcurrent WHERE in_out = 'In' AND cohortNumber = 9");
+}
+if($cohortNum == 10){
+	$clockedInStudents = mysqli_query($con,"SELECT * FROM cohortcurrent WHERE in_out = 'In' AND cohortNumber = 10");
 }
 
 while ($row = mysqli_fetch_array($clockedInStudents)){
